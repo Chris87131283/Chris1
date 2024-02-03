@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Page</title>
+    <style>
+        body {
+            background-color: #fce4ec; /* Same pink background as the main page */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #gif-container {
+            text-align: center;
+        }
+
+        #gif-image {
+            max-width: 100%; /* Ensure the GIF doesn't exceed the container width */
+        }
+    </style>
+</head>
+<body>
+    <div id="gif-container">
+        <!-- Placeholder for the GIF -->
+        <img id="gif-image" alt="GIF">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the choice parameter from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var choice = urlParams.get('choice');
+
+            // Set the GIF source based on the choice
+            var gifImage = document.getElementById('gif-image');
+            switch (choice) {
+                case 'A':
+                    gifImage.src = '/Users/Windows/Downloads/Proposal/aiphy.gif';
+                    break;
+                case 'B':
+                    gifImage.src = '/Users/Windows/Downloads/Proposal/biphy.gif';
+                    break;
+                case 'C':
+                    gifImage.src = '/Users/Windows/Downloads/Proposal/ciphy.gif';
+                    break;
+                case 'D':
+                    gifImage.src = '/Users/Windows/Downloads/Proposal/diphy.gif';
+                default:
+                    // Handle default case (optional)
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

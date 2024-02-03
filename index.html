@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+         @font-face {
+        font-family: 'Anniah'; /* Choose a name for your font */
+        src: url('/Users/Windows/Downloads/Proposal/PinyonScript-Regular.ttf') format('truetype'); /* Adjust the path and format accordingly */
+        /* Add other font-related styles if needed */
+    }
+
+	body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec; /* Light pink background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #proposal-container {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #gif-container {
+            margin-bottom: 20px;
+        }
+
+	h1 {
+        font-size: 3em;
+	font-family: 'Anniah', sans-serif; /* Replace 'Your Chosen Font' with the actual font name */
+        /* Add other font-related styles if needed */
+    }
+
+        #options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff80ab; /* Light pink button background */
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #ff5c8d; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="proposal-container">
+        <div id="gif-container">
+            <img src="giphy.gif" alt="Cute GIF" width="200" height="200">
+        </div>
+
+        <h1>Will you be my Valentine?</h1>
+
+        <div id="options-container">
+            <button onclick="respond('A')">A. YES!</button>
+            <button onclick="respond('B')">B. OF COURSE, DUDE!!!</button>
+            <button onclick="respond('C')">C. Both A & B</button>
+            <button onclick="respond('D')">D. No. [ Please wag mo piliin to :(( ]</button>
+        </div>
+    </div>
+
+    <script>
+    function respond(choice) {
+        // Define the URL of the GIF page
+        var gifPageUrl = 'gifPage.html';
+
+        // Redirect to the GIF page with the choice parameter
+        window.location.href = gifPageUrl + '?choice=' + choice;
+    }
+</script>
+</body>
+</html>
